@@ -1,7 +1,10 @@
 {
     "name": "@dunno/ono",
     "version": "0.0.1",
-    "exports": "./mod.ts",
+    "exports": {
+	"./gen": "./src/main.ts",
+	"./loggers": "./src/loggers.ts"
+    }
     "license": "MIT",
     "tasks": {
 	"dev": "deno run --watch main.ts"
