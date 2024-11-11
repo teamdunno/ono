@@ -1,6 +1,6 @@
 {
     "name": "@dunno/ono",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "exports": {
 	"./gen": "./src/main.ts",
 	"./loggers": "./src/loggers.ts"
