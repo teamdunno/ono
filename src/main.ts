@@ -7,6 +7,9 @@ type OnoColor = {
     fore: ForegroundColorName
 }
 
+/**
+ * Options for generating a logger
+ */
 export type Ono = {
     color: ColorName | OnoColor,
     name: string
@@ -23,11 +26,15 @@ function isOnoColor(value: any): value is OnoColor {
     )
 }
 
+/**
+ * The returned function by an ono({}) generator
+ */
 export type OnoFunction = (...message: string[]) => void
 
 /**
  * Ono generator - the main way to make a logger
  * @param ono Options for ono
+ * @returns The generated logger function
  */
 export function ono(ono: Ono): OnoFunction {
     let colorFunc;
